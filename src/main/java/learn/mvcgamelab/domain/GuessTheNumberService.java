@@ -13,14 +13,24 @@ public class GuessTheNumberService {
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 10;
 
-    private final int numberToGuess;
+    private int numberToGuess;
     private List<Integer> guesses = new ArrayList<>();
-
     private boolean isOver = false;
 
     public GuessTheNumberService() {
+        generateNumberToGuess();
+    }
+
+    private void generateNumberToGuess() {
         Random random = new Random();
         numberToGuess = random.nextInt(MIN_NUMBER, MAX_NUMBER + 1);
+    }
+
+    // resets the game
+    public void reset() {
+        generateNumberToGuess();
+        guesses.clear();
+        isOver = false;
     }
 
     // make a guess
@@ -46,27 +56,9 @@ public class GuessTheNumberService {
         return "Correct!";
     }
 
-    // rules
-
-
-    // randomly generate the number to guess (hard code the range)
-
-    // track the list of guesses
-
     // game status (in progress, complete)
     public String getGameStatus(){
         return String.format("Status: %s, guesses: %s", isOver ? "Game over" : "In progress",
                 guesses.stream().map(Object::toString).collect(Collectors.joining("-")));
     }
-
-
-
-
-
-
-
-
-
-
-
 }

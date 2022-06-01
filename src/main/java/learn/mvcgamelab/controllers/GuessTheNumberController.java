@@ -1,12 +1,10 @@
 package learn.mvcgamelab.controllers;
 
 import learn.mvcgamelab.domain.GuessTheNumberService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/guessthenumber") // path prefix
 public class GuessTheNumberController {
     private final GuessTheNumberService service;
 
@@ -14,14 +12,18 @@ public class GuessTheNumberController {
         this.service = service;
     }
 
-    @GetMapping("/api/guessthenumber")
+    @GetMapping
     public String getGame() {
         return service.getGameStatus();
     }
 
-    @PutMapping("/api/guessthenumber/{guess}")
+    @PutMapping("/{guess}")
     public String makeAGuess(@PathVariable int guess){
         return service.makeAGuess(guess);
     }
 
+    @PostMapping
+    public void resetTheGame() {
+        service.reset();
+    }
 }
