@@ -20,8 +20,25 @@ public class GuessTheNumberService {
         numberToGuess = random.nextInt(MIN_NUMBER, MAX_NUMBER + 1);
     }
 
-
-
+    // make a guess
+    public String makeAGuess(int guess){
+        // validation... out of range, too low, too high, not a number, duplicate guess
+        if (guess < MIN_NUMBER || guess > MAX_NUMBER){
+            //Out of bounds
+            return "Guess is out of range";
+        }else if(guesses.contains(guess)){
+            // Guess was already made
+            return "Duplicate guess";
+        }else if (guess < numberToGuess){
+            guesses.add(guess);
+            return "Guess is too low";
+        }else if (guess > numberToGuess) {
+            guesses.add(guess);
+            return "Guess is too high";
+        }
+        //If the other conditions were not meet the guess is correct
+        return "Correct!";
+    }
 
     // rules
 
@@ -33,9 +50,6 @@ public class GuessTheNumberService {
     // game status (in progress, complete)
 
 
-    // make a guess
-
-    // validation... out of range, too low, too high, not a number, duplicate guess
 
 
 
