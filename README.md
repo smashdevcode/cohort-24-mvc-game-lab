@@ -23,8 +23,8 @@ GET http://localhost:8080/api/guessthenumber HTTP/1.1
 
 ## Tasks
 
-* [ ] Create a private repo
-* [ ] Create a project
+* [x] Create a private repo
+* [x] Create a project
 * [ ] Create a class for the game logic
 * [ ] Write unit tests for the game logic???
 * [ ] Define endpoints
