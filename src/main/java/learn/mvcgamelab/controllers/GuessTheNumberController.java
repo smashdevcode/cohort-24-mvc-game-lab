@@ -15,12 +15,13 @@ public class GuessTheNumberController {
     }
 
     @GetMapping("/api/guessthenumber")
-    public void getGame() {
-        // TODO what do we want to return?
+    public String getGame() {
+        return service.getGameStatus();
     }
 
     @PutMapping("/api/guessthenumber/{guess}")
     public String makeAGuess(@PathVariable int guess){
         return service.makeAGuess(guess);
     }
+
 }
