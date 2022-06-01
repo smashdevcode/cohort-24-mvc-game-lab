@@ -2,6 +2,7 @@ package learn.mvcgamelab.domain;
 
 import org.springframework.stereotype.Service;
 
+import javax.lang.model.element.NestingKind;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -55,8 +56,10 @@ public class GuessTheNumberService {
 
     // game status (in progress, complete)
     public String getGameStatus(){
-        return String.format("Status: %s, guesses: %s", isOver ? "Game over" : "In progress",
-                guesses.stream().map(Object::toString).collect(Collectors.joining("-")));
+        String gameStatus = isOver ? "Game over" : "In progress";
+        String previousGuesses = guesses.stream().map(Object::toString).collect(Collectors.joining("-"));
+        return String.format("Status: %s, guesses: %s", gameStatus,
+                previousGuesses.isEmpty() ? "No guesses were made yet" : previousGuesses);
     }
 
 
