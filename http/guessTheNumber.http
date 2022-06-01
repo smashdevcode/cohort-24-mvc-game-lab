@@ -69,3 +69,8 @@ PUT http://localhost:8080/api/guessthenumber/9 HTTP/1.1
 
 PUT http://localhost:8080/api/guessthenumber/10 HTTP/1.1
 
+###
+
+# Make a guess 22
+
+PUT http://localhost:8080/api/guessthenumber/22 HTTP/1.1
