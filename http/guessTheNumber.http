@@ -1,70 +1,71 @@
 #Guess the number
 
 # Start a game 
-POST http://localhost:8080/api/guessTheNumber HTTP/1.1
+POST http://localhost:8080/api/guessthenumber HTTP/1.1
 
+###
 
 # Game status
 
-GET http://localhost:8080/api/guessTheNumber HTTP/1.1
+GET http://localhost:8080/api/guessthenumber HTTP/1.1
 
 ###
 
 # Make a guess 1
 
-PUT http://localhost:8080/api/guessTheNumber/1 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/1 HTTP/1.1
 
 ###
 
 # Make a guess 2
 
-PUT http://localhost:8080/api/guessTheNumber/2 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/2 HTTP/1.1
 
 ###
 
 # Make a guess 3
 
-PUT http://localhost:8080/api/guessTheNumber/3 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/3 HTTP/1.1
 
 ###
 
 # Make a guess 4
 
-PUT http://localhost:8080/api/guessTheNumber/4 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/4 HTTP/1.1
 
 ###
 
 # Make a guess 5
 
-PUT http://localhost:8080/api/guessTheNumber/5 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/5 HTTP/1.1
 
 ###
 
 # Make a guess 6
 
-PUT http://localhost:8080/api/guessTheNumber/6 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/6 HTTP/1.1
 
 ###
 
 # Make a guess 7
 
-PUT http://localhost:8080/api/guessTheNumber/7 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/7 HTTP/1.1
 
 ###
 
 # Make a guess 8
 
-PUT http://localhost:8080/api/guessTheNumber/8 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/8 HTTP/1.1
 
 ###
 
 # Make a guess 9
 
-PUT http://localhost:8080/api/guessTheNumber/9 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/9 HTTP/1.1
 
 ###
 
 # Make a guess 10
 
-PUT http://localhost:8080/api/guessTheNumber/10 HTTP/1.1
+PUT http://localhost:8080/api/guessthenumber/10 HTTP/1.1
 
